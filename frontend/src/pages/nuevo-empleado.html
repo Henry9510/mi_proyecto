@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/src/styles/style.css">
+    <title>Gestión de Personal</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-cabecera">
+
+            <div class="div-logo">
+                <a href="index.html"> <img src="/frontend/src/imag/logo.svg"> </a>
+            </div>
+
+            <div class="div-buscar">
+                <h6>Buscar</h6>
+                <input class="box-buscar" type="text" placeholder="Buscar">
+            </div>
+
+
+            <ul class="nav-list">
+                <li>
+                    <img src="/frontend/src/imag/gear.svg" width="32px" class="toggle-btn">
+                    <ul class="config">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="/frontend/src/imag/alert.svg" width="32px" class="toggle-btn">
+                    <ul class="alert">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="/frontend/src/imag/avatar.svg" width="32px" class="toggle-btn">
+                    <ul class="login">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="m-new-empleado">
+
+
+        <aside class="nav-lateral">
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li>
+                        <a href="#">Usuarios</a>
+                        <ul>
+                            <li><a href="nuevo-empleado.html">Registrar</a></li>
+                            <li><a href="registro-horas.html">Registro de horas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Inventario</a>
+                        <ul>
+                            <li><a href="nuevo-producto.html">Crear producto</a></li>
+                            <li><a href="transferirAlmacen.html">Transferir a almacén</a></li>
+                            <li><a href="transferirProyecto.html">Transferir a proyecto</a></li>
+                            <li><a href="listaTransferencia.html">Lista de Transferencia</a></li>
+                            <li><a href="lista-insumo.html">Almacén</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Proyectos</a>
+                        <ul>
+                            <li><a href="crearProyectos.html">Nuevo</a></li>
+                            <li><a href="recibirPedidos.html">Recibir Pedidos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Reportes</a>
+                        <ul>
+                            <li><a href="#">Avance en proyecto</a></li>
+                            <li><a href="#">Inventario de proyecto</a></li>
+                            <li><a href="#">Insulto Faltantes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Test</a>
+                        <ul>
+                            <li><a href="pruebas.html">Test </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="form-section">
+            <h2>Gestión de Personal</h2>
+            <h3>Registro de Empleado</h3>
+            <form class="form-nuevo-usuario">
+                <div class="form-group div-nombre">
+                    <div class="campo">
+                        <label for="cedula">Cédula:</label>
+                        <input type="text" id="cedula" name="cedula" required>
+                    </div>
+                    <div class="campo">
+                        <label for="primer_nombre">Primer Nombre:</label>
+                        <input type="text" id="primer_nombre" name="primer_nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="segundo_nombre">Segundo Nombre:</label>
+                        <input type="text" id="segundo_nombre" name="segundo_nombre" required>
+                    </div>
+                </div>
+                <div class="form-group div-apellido">
+                    <div class="campo">
+                        <label for="primer_apellido">Primer Apellido:</label>
+                        <input type="text" id="primer_apellido" name="primer_apellido" required>
+                    </div>
+                    <div class="campo">
+                        <label for="segundo_apellido">Segundo Apellido:</label>
+                        <input type="text" id="segundo_apellido" name="segundo_apellido" required>
+                    </div>
+                    <div class="campo">
+                        <label for="edad">Edad:</label>
+                        <input class="i-edad" type="number" id="edad" name="edad" min="0" required>
+                    </div>
+                </div>
+                <div class="form-group div-complemento">
+                    <div class="campo">
+                        <label for="cargo">Cargo:</label>
+                        <select id="cargo" name="cargo" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="recursos_humanos">Recursos Humanos</option>
+                            <option value="finanzas">Finanzas</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="it">IT</option>
+                            <option value="produccion">Producción</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                        <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+                    </div>
+                </div>
+                <div class="btn-crear">
+                    <button type="submit">CREAR</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>

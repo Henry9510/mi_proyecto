@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/src/styles/style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div>
+        <nav class="sidebar">
+            <a href="index.html">INICIO</a>
+            <a href="GestMate.html">Materia Prima</a>
+            <a href="Personas.html">Personal</a>
+            <a href="Proyectos.html">Proyectos</a>
+            <a href="Reportes.html">Reportes</a>
+        </nav>
+    </div>
+
+    <h2>Gestión de Materia Prima</h2>
+    <div class="main-producto">
+
+        <form class="form-producto" action="http://127.0.0.1:8080/api/producto" method="POST">
+
+            
+                <label for="nombre">Descripción:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="PartNumber">Número de Parte:</label>
+                <input type="text" id="PartNumber" name="PartNumber">
+           
+
+            
+                <label for="unidad">Unidades de Producto:</label>
+                <input type="text" id="unidad" name="unidad">
+        
+
+          
+                <label for="procedencia">Procedencia:</label>
+                <input type="text" id="procedencia" name="procedencia">
+       
+
+                <label for="material">Material:</label>
+                <input type="text" id="material" name="material">
+       
+
+
+            
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio">
+          
+
+                <button id="btncrear" type="submit">Guardar</button>
+         
+        </form>
+
+
+    </div>
+
+    <script src="/frontend/src/assets/form.js"></script>
+
+
+</body>
+
+
+
+</html>

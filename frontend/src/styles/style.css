@@ -1,0 +1,408 @@
+:root {
+    --color-principal: #FBFCFD;
+    --color-Secundario: #fff;
+    --color-box: #EBEDF1;
+    --color-contenedores: #6482AD;
+    --font-size: 12px;
+
+}
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    /* Opcional: para eliminar el espacio de indentación */
+}
+
+ul li {
+    margin-left: 0;
+    /* Opcional: para eliminar cualquier margen a la izquierda */
+}
+
+header {
+    display: flex;
+    height: 50px;
+    background-color: var(--color-Secundario);
+    border: 0;
+    margin: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: var(--color-box) solid;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    background-color: var(--color-principal);
+
+}
+
+.nav-cabecera {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.div-logo {
+
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+}
+
+.div-buscar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    gap: 10px;
+    width: 30%;
+    height: 100%;
+    color: #000000;
+    
+}
+
+
+.box-buscar {
+    width: 1000px;
+
+}
+
+
+
+.nav-list {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.nav-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+
+
+
+}
+
+.nav-lateral {
+    display: flex;
+    background-color: var(--color-Secundario);
+    width: 25%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    border-right: var(--color-box) solid;
+
+}
+
+.nav-lateral ul {
+    gap: 20PX;
+
+}
+
+.cont-main {
+    width: 80%;
+    margin-top: 20px;
+    margin-right: 20px;
+
+
+
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.card {
+    background-color: var(--color-Secundario);
+    border: solid var(--color-box);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+
+}
+
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: space-between;
+
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+.tablas-mes {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+
+.tablas-indicadores {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+
+}
+
+
+/* Estilos básicos del formulario */
+.form-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2, .form-section h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-nuevo-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.campo input[type="text"], .campo input[type="number"], .campo input[type="date"], .campo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.campo input[type="text"]:focus, .campo input[type="number"]:focus, .campo input[type="date"]:focus, .campo select:focus {
+    border-color: #00B9A0;
+    outline: none;
+}
+
+.btn-crear {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-crear button {
+    padding: 12px 20px;
+    background-color: #00B9A0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-crear button:hover {
+    background-color: #00796B;
+}
+
+/* Asegurarse de que los campos se mantengan alineados horizontalmente */
+.form-group {
+    align-items: center;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input, .campo select {
+    width: 100%;
+}
+
+
+/* Estilos básicos del formulario */
+.form-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-producto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #00B9A0;
+    outline: none;
+}
+
+.btn-guardar {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-guardar button {
+    padding: 12px 20px;
+    background-color: #00B9A0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-guardar button:hover {
+    background-color: #00796B;
+}
+
+
+
+
+
+
+/* Estilos básicos del formulario */
+
+
+
+.form-producto {
+    display: flex;
+    flex-direction:column;
+    height:30%px;
+    width: 50%;
+     border: 1px darksalmon dashed;
+    
+}
+
+.form-producto label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-producto input[type="text"],
+.form-producto input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-producto input[type="text"]:focus,
+.form-producto input[type="number"]:focus {
+    border-color: #00B9A0;
+    outline: none;
+}
+
+button {
+    text-align: center;
+}
+
+button{
+    padding: 12px 20px;
+    background-color: #3add1d;
+    color: #fff;
+    width: 123px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00796B;
+}
