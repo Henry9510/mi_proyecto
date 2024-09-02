@@ -17,7 +17,7 @@ import jakarta.persistence.Id;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idProducto;
+    long id;
     
     String Nombre;
     String PartNumber;
@@ -42,13 +42,11 @@ public class Producto {
     }
     
 
-    public int getId() {
-        return this.idProducto;
+    public long getId() {
+        return this.id;
     }
 
-    public void setId(String idProducto) {
-        this.Nombre = idProducto;
-    }
+   
   
 
 

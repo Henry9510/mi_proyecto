@@ -1,11 +1,24 @@
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Selección del botón y asignación del evento
+    let boton = document.getElementById("btncrear");
 
-// Selección del botón y asignación del evento
-let boton = document.getElementById("btncrear");
+    if (boton) {
+        boton.addEventListener("click", evento => {
+            registrarProducto();
 
-boton.addEventListener("click", evento => {
-    registrarProducto();
+            // Limpiar los campos del formulario
+            document.getElementById('nombre').value = '';
+            document.getElementById('PartNumber').value = '';
+            document.getElementById('unidad').value = '';
+            document.getElementById('procedencia').value = '';
+            document.getElementById('material').value = '';
+            document.getElementById('precio').value = '';
+        });
+    } else {
+        console.error('El botón con ID "btncrear" no se encuentra en el DOM.');
+    }
 });
 
 // Declaración de la función antes de su uso
@@ -32,3 +45,5 @@ let registrarProducto = async () => {
         });
         
 }
+
+

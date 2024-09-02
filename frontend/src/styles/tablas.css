@@ -1,9 +1,14 @@
 
-.formEditarProducto{
+.div-edit{
     display: flex;
     flex-direction: column;
     visibility: hidden;
     width: 20%;
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
 }
 /* Estilo para la tabla */
 #tablaProductos {

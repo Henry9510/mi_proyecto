@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/frontend/src/styles/style.css"> <!-- Tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
 </head>
 
 <body>
@@ -13,32 +14,31 @@
         <nav class="nav-cabecera">
 
             <div class="div-logo">
-                <a href="index.html"> <img src="/frontend/src/imag/logo.svg"> </a>
+                <a href="index.html"> <i class="fab fa-android"></i></a>
             </div>
 
-            <div class="div-buscar">
-                <h6>Buscar</h6>
-                <input class="box-buscar" type="text" placeholder="Buscar">
+            <div class="nombreUsuario">
+                <p>Hola bienvenido...</p>
             </div>
 
 
             <ul class="nav-list">
                 <li>
-                    <img src="/frontend/src/imag/gear.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-cogs toggle-btn"></i>
                     <ul class="config">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <img src="/frontend/src/imag/alert.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-bell toggle-btn"></i>
                     <ul class="alert">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <img src="/frontend/src/imag/avatar.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-user toggle-btn"></i>
                     <ul class="login">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
@@ -50,62 +50,49 @@
     </header>
 
 
-    <main>
+    <main class="main-index">
         <!-- Barra de navegación lateral -->
         <aside class="nav-lateral">
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
                     <li>
-                        <a href="#">Usuarios</a>
-
+                        <a href="#"><i class="fas fa-users"></i> Usuarios</a>
                         <ul>
-                            <br>
-
-                            <li><a href="nuevo-empleado.html">Registrar</a></li>
-                            <li><a href="registro-horas.html">Registro de horas</a></li>
+                            <li><a href="nuevo-empleado.html"><i class="fas fa-user-plus"></i> Registrar</a></li>
+                            <li><a href="registro-horas.html"><i class="fas fa-clock"></i> Registro de horas</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Inventario</a>
-
+                        <a href="#"><i class="fas fa-box"></i> Inventario</a>
                         <ul>
-                            <br>
-
-                            <li><a href="nuevo-producto.html">Crear producto</a></li>
-                            <li><a href="transferirAlmacen.html">Transferir a almacén</a></li>
-                            <li><a href="transferirProyecto.html">Transferir a proyecto</a></li>
-                            <li><a href="listaTransferencia.html">Lista de Transferencia</a></li>
-                            <li><a href="lista-insumo.html">Almacén</a></li>
+                            <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a></li>
+                            <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Proyectos</a>
-
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Proyectos</a>
                         <ul>
-                            <br>
-
-                            <li><a href="nuevo-proyecto.html">Nuevo</a></li>
-                            <li><a href="recibirPedidos.html">Recibir Pedidos</a></li>
+                            <li><a href="nuevo-proyecto.html"><i class="fas fa-plus-circle"></i> Nuevo</a></li>
+                            <li><a href="recibirPedidos.html"><i class="fas fa-receipt"></i> Recibir Pedidos</a></li>
+                            <li><a href="lista-proyectos.html"><i class="fas fa-list"></i> Lista Proyecto</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Reportes</a>
-
+                        <a href="#"><i class="fas fa-chart-line"></i> Reportes</a>
                         <ul>
-                            <br>
-
-                            <li><a href="#">Avance en proyecto</a></li>
-                            <li><a href="#">Inventario de proyecto</a></li>
-                            <li><a href="#">Insulto Faltantes</a></li>
+                            <li><a href="#"><i class="fas fa-project-diagram"></i> Avance en proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i> Inventario de proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Insulto Faltantes</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Test</a>
-
+                        <a href="#"><i class="fas fa-test-tube"></i> Test</a>
                         <ul>
-                            <br>
-                            <li><a href="pruebas.html">Test </a></li>
+                            <li><a href="pruebas.html"><i class="fas fa-vial"></i> Test</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -114,10 +101,34 @@
 
         <section class="cont-main">
             <section class="cards">
-                <div class="card">Tarjeta proyectos mes</div>
-                <div class="card">Tarjeta proyecto terminado mes</div>
-                <div class="card">Tarjeta total de solicitudes</div>
-                <div class="card">Tarjeta total de faltantes</div>
+                <div class="card">
+                    <i class="fas fa-calendar"></i>
+                    <div class="info">
+                        <h3>Tarjeta proyectos mes</h3>
+                        <span class="number">123</span> <!-- Número variable -->
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="info">
+                        <h3>Tarjeta proyecto terminado mes</h3>
+                        <span class="number">45</span> <!-- Número variable -->
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-list-alt"></i>
+                    <div class="info">
+                        <h3>Tarjeta total de solicitudes</h3>
+                        <span class="number">78</span> <!-- Número variable -->
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="info">
+                        <h3>Tarjeta total de faltantes</h3>
+                        <span class="number">12</span> <!-- Número variable -->
+                    </div>
+                </div>
             </section>
 
             <!-- Tablas de proyectos -->
@@ -136,17 +147,17 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Juan Pérez</td>
+                                    <td>Proyecto1</td>
                                     <td>28</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
-                                    <td>Ana López</td>
+                                    <td>Proyecto2</td>
                                     <td>34</td>
                                     <td>5</td>
                                 </tr>
                                 <tr>
-                                    <td>María García</td>
+                                    <td>Proyecto3</td>
                                     <td>22</td>
                                     <td>20</td>
                                 </tr>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="/frontend/src/styles/style-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
+
 </head>
 
 <body>
- 
+
     <header>
         <nav class="nav-cabecera">
 
@@ -67,9 +68,12 @@
                         <a href="#"><i class="fas fa-box"></i> Inventario</a>
                         <ul>
                             <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
-                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a almacén</a></li>
-                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a proyecto</a></li>
-                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a></li>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a
+                                    almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a
+                                    proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a>
+                            </li>
                             <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
                         </ul>
                     </li>
@@ -98,62 +102,30 @@
             </nav>
         </aside>
 
+
         <section>
-            <h2>Gestión de Personal</h2>
-            <h3>Registro de Empleado</h3>
-            <form class="form-nuevo-usuario">
-                <div class="form-group div-nombre">
-                    <div class="campo">
-                        <label for="cedula">Cédula:</label>
-                        <input type="text" id="cedula" name="cedula" required>
-                    </div>
-                    <div class="campo">
-                        <label for="primer_nombre">Primer Nombre:</label>
-                        <input type="text" id="primer_nombre" name="primer_nombre" required>
-                    </div>
-                    <div class="campo">
-                        <label for="segundo_nombre">Segundo Nombre:</label>
-                        <input type="text" id="segundo_nombre" name="segundo_nombre" required>
-                    </div>
-                </div>
-                <div class="form-group div-apellido">
-                    <div class="campo">
-                        <label for="primer_apellido">Primer Apellido:</label>
-                        <input type="text" id="primer_apellido" name="primer_apellido" required>
-                    </div>
-                    <div class="campo">
-                        <label for="segundo_apellido">Segundo Apellido:</label>
-                        <input type="text" id="segundo_apellido" name="segundo_apellido" required>
-                    </div>
-                    <div class="campo">
-                        <label for="edad">Edad:</label>
-                        <input class="i-edad" type="number" id="edad" name="edad" min="0" required>
-                    </div>
-                </div>
-                <div class="form-group div-complemento">
-                    <div class="campo">
-                        <label for="cargo">Cargo:</label>
-                        <select id="cargo" name="cargo" required>
-                            <option value="">Seleccione una opción</option>
-                            <option value="recursos_humanos">Recursos Humanos</option>
-                            <option value="finanzas">Finanzas</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="it">IT</option>
-                            <option value="produccion">Producción</option>
-                        </select>
-                    </div>
-                    <div class="campo">
-                        <label for="fecha_ingreso">Fecha de Ingreso:</label>
-                        <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
-                    </div>
-                </div>
-                <div class="btn-crear">
-                    <button type="submit">CREAR</button>
-                </div>
+            <div>
+                <h2>Gestión de Materia Prima</h2>
+            </div>
+            <h1>Editar Producto</h1>
+            <form id="formEditarProducto">
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="text" id="partNumber" placeholder="Número de Parte">
+                <input type="text" id="unidad" placeholder="Unidad">
+                <input type="text" id="procedencia" placeholder="Procedencia">
+                <input type="text" id="material" placeholder="Material">
+                <input type="number" id="precio" placeholder="Precio" step="0.01">
+                <button type="button" id="btnModificar">Modificar</button>
             </form>
+          
+
         </section>
 
     </main>
+
+
+    <script src="/frontend/src/assets/tabla.js"></script>
+
 </body>
 
 </html>

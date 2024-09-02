@@ -15,6 +15,6 @@ import com.example.CollaboratePro.model.Producto;
  * @author Henry
  */
 @Repository
-public interface ProductoRepository  extends JpaRepository <Producto, Integer> {
+public interface ProductoRepository  extends JpaRepository <Producto, Long> {
     
 }

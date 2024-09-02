@@ -16,78 +16,84 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.CollaboratePro.Repository.ProductoRepository;
-import com.example.CollaboratePro.model.Producto;
+import com.example.CollaboratePro.Repository.ProyectoRepository;
+import com.example.CollaboratePro.model.Proyecto;
 
 @RestController
-public class ProductoController {
+public class ProyectoController {
 
-    private final ProductoRepository repositorio;
+    private final ProyectoRepository repositorio;
 
-    public ProductoController(ProductoRepository repository) {
+    public ProyectoController(ProyectoRepository repository) {
         this.repositorio = repository;
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    @GetMapping("/api/producto")
-    public List<Producto> obtenerProducto() {
+    @GetMapping("/api/proyecto")
+    public List<Proyecto> obtenerProyecto() {
         return repositorio.findAll();
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    @GetMapping("/api/producto/{id}")
-    public ResponseEntity<Producto> obtenerProducto(@PathVariable Long id) {
-        Optional<Producto> opt = repositorio.findById(id);
+    @GetMapping("/api/proyecto/{id}")
+    public ResponseEntity<Proyecto> obtenerProyecto(@PathVariable Long id) {
+        Optional<Proyecto> opt = repositorio.findById(id);
 
         return opt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    @PostMapping("/api/producto")
+    @PostMapping("/api/proyecto")
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    public ResponseEntity<Producto> guardarProducto(@RequestBody Producto Producto) {
-        if (Producto.getId() != 0) {
+    public ResponseEntity<Proyecto> guardarProyecto(@RequestBody Proyecto proyecto) {
+        // Verifica si el proyecto tiene un ID ya establecido
+        if (proyecto.getId() != 0) {
+            // Retorna un error 400 Bad Request si el ID ya está presente
             return ResponseEntity.badRequest().build();
         }
-        repositorio.save(Producto);
-        return ResponseEntity.ok(Producto);
+    
+        // Guarda el nuevo proyecto en la base de datos
+        Proyecto savedProyecto = repositorio.save(proyecto);
+    
+        // Retorna el proyecto guardado con estado HTTP 201 Created
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedProyecto);
     }
 
-    @PutMapping("/api/producto/{id}")
+
+
+    @PutMapping("/api/proyecto/{id}")
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    public ResponseEntity<Producto> actualizarProducto(@PathVariable Long id, @RequestBody Producto Producto) {
+    public ResponseEntity<Proyecto> actualizarProyecto(@PathVariable Long id, @RequestBody Proyecto Proyecto) {
         // Check if the product with the given ID exists
         if (!repositorio.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
 
         // Retrieve the existing product
-        Producto existingProducto = repositorio.findById(id).orElse(null);
+        Proyecto existingProyecto = repositorio.findById(id).orElse(null);
         
-        if (existingProducto == null) {
+        if (existingProyecto == null) {
             return ResponseEntity.notFound().build();
         }
+
+           // Update the existing product with new values
+        existingProyecto.setDescripcion(Proyecto.getDescripcion());
+        existingProyecto.setNumeroProyecto(Proyecto.getNumeroProyecto());
+        existingProyecto.setHorasEstimadas(Proyecto.getHorasEstimadas());
         
-        // Update the existing product with new values
-        existingProducto.setNombre(Producto.getNombre());
-        existingProducto.setUnidad(Producto.getUnidad());
-        existingProducto.setMaterial(Producto.getMaterial());
-        existingProducto.setPrecio(Producto.getPrecio());
-        existingProducto.setProcedencia(Producto.getProcedencia());
-        existingProducto.setPartNumber(Producto.getPartNumber());
 
         // Save the updated product
-        Producto updatedProducto = repositorio.save(existingProducto);
+        Proyecto updatedProyecto = repositorio.save(existingProyecto);
         
         // Return the updated product with an HTTP 200 OK status
-        return ResponseEntity.ok(updatedProducto);
+        return ResponseEntity.ok(updatedProyecto);
     }
 
     
 
     
-    @DeleteMapping("/api/producto/{id}")
+    @DeleteMapping("/api/proyecto/{id}")
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    public ResponseEntity<Producto> borrarProducto(@PathVariable Long id) {
+    public ResponseEntity<Proyecto> borrarProducto(@PathVariable Long id) {
         if (id == null || !repositorio.existsById(id)) {
             return ResponseEntity.badRequest().build();
         }

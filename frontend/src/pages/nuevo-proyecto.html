@@ -4,26 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/src/styles/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
 </head>
 
 <body>
+    <header>
+        <nav class="nav-cabecera">
 
-    <div>
-        <nav class="sidebar">
-            <a href="index.html">INICIO</a>
-            <a href="GestMate.html">Materia Prima</a>
-            <a href="Personas.html">Personal</a>
-            <a href="Proyectos.html">Proyectos</a>
-            <a href="Reportes.html">Reportes</a>
+            <div class="div-logo">
+                <a href="index.html"> <i class="fab fa-android"></i></a>
+            </div>
+
+            <div class="nombreUsuario">
+                <p>Hola bienvenido...</p>
+            </div>
+
+
+            <ul class="nav-list">
+                <li>
+                    <i class="fas fa-cogs toggle-btn"></i>
+                    <ul class="config">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-bell toggle-btn"></i>
+                    <ul class="alert">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-user toggle-btn"></i>
+                    <ul class="login">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-    </div>
+
+    </header>
 
 
-    <h2>Gestión de proyecto</h2>
-  
-        <h3>Creacion de Proyecto</h3>
+    <main class="main-index">
+        <!-- Barra de navegación lateral -->
+        <aside class="nav-lateral">
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> Usuarios</a>
+                        <ul>
+                            <li><a href="nuevo-empleado.html"><i class="fas fa-user-plus"></i> Registrar</a></li>
+                            <li><a href="registro-horas.html"><i class="fas fa-clock"></i> Registro de horas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-box"></i> Inventario</a>
+                        <ul>
+                            <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a></li>
+                            <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Proyectos</a>
+                        <ul>
+                            <li><a href="nuevo-proyecto.html"><i class="fas fa-plus-circle"></i> Nuevo</a></li>
+                            <li><a href="recibirPedidos.html"><i class="fas fa-receipt"></i> Recibir Pedidos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-line"></i> Reportes</a>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-project-diagram"></i> Avance en proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i> Inventario de proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Insulto Faltantes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-test-tube"></i> Test</a>
+                        <ul>
+                            <li><a href="pruebas.html"><i class="fas fa-vial"></i> Test</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+ 
         <section class="form-section">
             <h2>Registro de Proyecto</h2>
             <form class="form-proyecto">
@@ -47,6 +122,8 @@
                 </div>
             </form>
         </section>
+    </main>
+    
 </body>
 
 </html>

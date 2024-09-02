@@ -1,0 +1,316 @@
+:root {
+    --color-principal: rgba(245 247 248);
+    --color-Secundario: #fff;
+    --color-box: #EBEDF1;
+    --color-contenedores: #6482AD;
+    --font-size: 12px;
+
+}
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--color-Secundario);
+}
+
+
+header {
+    display: flex;
+    height: 50px;
+    background-color: var(--color-Secundario);
+    margin: 0;
+    border-bottom: var(--color-box) solid;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-index {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    width: 100%;
+    height:100%;
+    background-color: var(--color-principal);
+    padding: 1%;
+
+}
+
+.nav-cabecera {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;;
+
+
+}
+
+.div-logo {
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.div-logo i {
+    font-size: 30px; /* Tamaño del icono del logo */
+    color: #333; /* Color del icono */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+
+
+.nombreUsuario {
+    font-size: 30px;
+    
+}
+
+
+
+.nav-list {
+    display: flex;
+    color: var(--color-contenedores);
+    gap: 20px; /* Espaciado entre los elementos de la lista */
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Ocupa el espacio disponible a la derecha */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    font-size: 25px;
+    
+}
+
+/* Estilo para los elementos de la lista */
+.nav-list li {
+    position: relative;
+    
+}
+
+/* Estilo para los iconos */
+.nav-list img {
+    cursor: pointer;
+}
+
+/* Estilo para los submenús */
+.nav-list ul {
+    display: none; /* Oculta los submenús por defecto */
+    position: absolute;
+    top: 100%; /* Posiciona el submenú debajo del ítem */
+    right: 0; /* Alinea el submenú a la derecha */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    list-style: none;
+}
+
+/* Estilo para los elementos del submenú */
+.nav-list ul li {
+    margin: 0;
+}
+
+/* Mostrar el submenú al pasar el ratón sobre el ítem */
+.nav-list li:hover ul {
+    display: block;
+}
+
+
+
+
+
+
+.nav-lateral ul {
+    gap: 20PX;
+
+}
+
+.cont-main {
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    margin-right: 20px;
+
+
+
+}
+.nav-lateral {
+    display: flex;
+    width:220px;
+    border-radius: 15px;
+    background-color:#fff;
+    color:#6482AD;
+    padding-top: 5vh;
+    height: 100vh;
+    padding: 5vh;
+
+}
+
+.nav-lateral nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-lateral nav ul li {
+    margin: 15px 0;
+}
+
+.nav-lateral nav ul li a {
+    color:#6482AD;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-lateral nav ul li a i {
+    margin-right: 10px;
+}
+
+.nav-lateral nav ul li ul {
+    padding-left: 20px;
+    display: none;
+}
+
+.nav-lateral nav ul li:hover ul {
+    display: block;
+}
+
+
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+
+
+
+.card {
+    background-color:var(--color-Secundario);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.card i {
+    font-size: 40px;
+    color:var(--color-contenedores);
+    margin-bottom: 10px;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card .number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Color del número */
+}
+
+
+
+
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-top: 20px;
+    align-content: stretch;
+    padding: 2%;
+    background-color: #fff;
+
+}
+
+
+.tablas-mes {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+
+.tablas-indicadores {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+
+}
+
+
+
+
+/* Estilo para el título de la tabla */
+.table-container-1 h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para las celdas del encabezado */
+thead th {
+    background-color: #4e88c5; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #8297ad; /* Línea debajo del encabezado */
+}
+
+/* Estilo para las celdas del cuerpo */
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Línea debajo de cada fila */
+    text-align: left;
+}
+
+/* Estilo para la fila activa (hover) */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón sobre la fila */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para la fila alternada */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
