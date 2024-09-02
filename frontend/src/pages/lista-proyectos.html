@@ -135,29 +135,33 @@
                     <!-- Las filas de datos se agregarán aquí dinámicamente -->
                 </tbody>
             </table>
-            <div class="div-edit">
-                <div style="background-color: antiquewhite;">
-                    <h2>Gestión de Materia Prima</h2>
-                </div>
-                <h1>Editar Producto</h1>
-                <form class="form-producto" id="formEditarProducto">
-                    <div class="sect-div1">
-                        <div class="div-producto">
-                            <label for="nombre">Descripción:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="div-producto">
-                            <label for="partNumber">Número de Parte:</label>
-                            <input type="text" id="partNumber" name="partNumber" required>
-                        </div>
-                        <div class="div-producto">
-                            <label for="unidad">Unidades de Producto:</label>
-                            <input type="text" id="unidad" name="unidad" required>
-                        </div>
+            <section class="form-section">
+                <div class="div-edit">
+                    <div style="background-color: antiquewhite;">
+                        <h2>Gestión de Proyectos</h2>
                     </div>
-                </form>
-
-        </section>
+                    <h1>Editar Proyecto</h1>
+                    <form class="form-proyecto" id="formEditarProyecto">
+                        <div class="sect-div1">
+                            <div class="div-proyecto">
+                                <label for="codigoProyecto">Número de Proyecto:</label>
+                                <input type="text" id="codigoProyecto" name="codigoProyecto" required>
+                            </div>
+                            <div class="div-proyecto">
+                                <label for="descripcionProyecto">Descripción:</label>
+                                <input type="text" id="descripcionProyecto" name="descripcionProyecto" required>
+                            </div>
+                            <div class="div-proyecto">
+                                <label for="horasProyecto">Horas Estimadas:</label>
+                                <input type="number" id="horasProyecto" name="horasProyecto" required>
+                            </div>
+                        </div>
+                        <div class="btn-guardar">
+                            <button type="submit">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
 
     </main>

@@ -100,30 +100,37 @@
 
  
         <section class="form-section">
-            <h2>Registro de Proyecto</h2>
-            <form class="form-proyecto">
-                <div class="form-group">
-                    <label for="codigoProyecto">Número de Proyecto:</label>
-                    <input type="text" id="codigoProyecto" name="codigoProyecto">
+            <div class="div-edit">
+                <div style="background-color: antiquewhite;">
+                    <h2>Gestión de Proyectos</h2>
                 </div>
-
-                <div class="form-group">
-                    <label for="descripcionProyecto">Descripción:</label>
-                    <input type="text" id="descripcionProyecto" name="descripcionProyecto">
-                </div>
-
-                <div class="form-group">
-                    <label for="horasProyecto">Horas Estimadas:</label>
-                    <input type="number" id="horasProyecto" name="horasProyecto">
-                </div>
-
-                <div class="btn-guardar">
-                    <button type="submit">Guardar</button>
-                </div>
-            </form>
+                <h1>Registrar Proyecto</h1>
+                <form class="form-proyecto" id="formRegistrarProyecto">
+                    <div class="form-group">
+                        <label for="numeroProyecto">Número de Proyecto:</label>
+                        <input type="number" id="numeroProyecto" name="numeroProyecto" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="descripcionProyecto">Descripción:</label>
+                        <input type="text" id="descripcionProyecto" name="descripcionProyecto" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="horasEstimadas">Horas Estimadas:</label>
+                        <input type="number" id="horasEstimadas" name="horasEstimadas" min="0" required>
+                    </div>
+        
+                    <div class="btn-guardar">
+                        <button type="submit" id="btncrear">Guardar</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
-    
-</body>
 
+</body>
+    
+    <script src="/frontend/src/assets/formProyectos.js"></script>
+    <script src="https://use.fontawesome.com/bf66789927.js"></script>
 </html>

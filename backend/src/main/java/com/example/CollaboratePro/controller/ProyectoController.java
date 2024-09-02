@@ -76,7 +76,7 @@ public class ProyectoController {
         }
 
            // Update the existing product with new values
-        existingProyecto.setDescripcion(Proyecto.getDescripcion());
+        existingProyecto.setDescripcionProyecto(Proyecto.getDescripcionProyecto());
         existingProyecto.setNumeroProyecto(Proyecto.getNumeroProyecto());
         existingProyecto.setHorasEstimadas(Proyecto.getHorasEstimadas());
         

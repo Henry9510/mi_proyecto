@@ -20,7 +20,7 @@ public class Proyecto {
     long id;
 
     int NumeroProyecto;
-    String Descripcion;
+    String DescripcionProyecto;
     int HorasEstimadas;
 
     public Proyecto() {
@@ -31,7 +31,7 @@ public class Proyecto {
     public Proyecto(int NumeroProyecto, String Descripcion, int HorasEstimadas) {
         
         this.NumeroProyecto = NumeroProyecto;
-        this.Descripcion = Descripcion;
+        this.DescripcionProyecto = Descripcion;
         this.HorasEstimadas = HorasEstimadas;
     }
 
@@ -53,12 +53,12 @@ public class Proyecto {
         this.NumeroProyecto = NumeroProyecto;
     }
 
-    public String getDescripcion() {
-        return this.Descripcion;
+    public String getDescripcionProyecto() {
+        return this.DescripcionProyecto;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+    public void setDescripcionProyecto(String DescripcionProyecto) {
+        this.DescripcionProyecto = DescripcionProyecto;
     }
 
     public int getHorasEstimadas() {
