@@ -4,105 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>Gestión de Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
 </head>
 
+
 <body>
-    <div class="sidebar">
-        <!-- Barra lateral de navegación -->
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="#">Materia Prima</a>
-            <a href="#">Personal</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Reportes</a>
+    <header>
+        <nav class="nav-cabecera">
+
+            <div class="div-logo">
+                <a href="index.html"> <i class="fab fa-android"></i></a>
+            </div>
+
+            <div class="nombreUsuario">
+                <p>Hola bienvenido...</p>
+            </div>
+
+
+            <ul class="nav-list">
+                <li>
+                    <i class="fas fa-cogs toggle-btn"></i>
+                    <ul class="config">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-bell toggle-btn"></i>
+                    <ul class="alert">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-user toggle-btn"></i>
+                    <ul class="login">
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-    </div>
-    <!-- Contenido principal -->
-    <main class="m-registro-hora">
-        <div >
-            <div class="campo-titulo">
-                <h2 class="h2">Gestión de Personal</h2>
-            </div>
-            <div class="campo-titulo">
-                <h3 class="h3">Registro de Horas Trabajadas</h3>
-            </div>
 
-        </div>
+    </header>
 
 
-        <!-- Sección de formulario -->
+    <main class="main-index">
+        <!-- Barra de navegación lateral -->
+        <aside class="nav-lateral">
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li>
+                        <i class="fas fa-users"></i> Usuarios
+                        <ul>
+                            <li><a href="nuevo-empleado.html"><i class="fas fa-user-plus"></i> Registrar</a></li>
+                            <li><a href="lista-empleado.html"><i class="fas fa-list"></i> Lista Empleados</a></li>
+                            <li><a href="registro-horas.html"><i class="fas fa-clock"></i> Registro de horas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-box"></i> Inventario
+                        <ul>
+                            <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
+                            <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-tachometer-alt"></i> Proyectos
+                        <ul>
+                            <li><a href="nuevo-proyecto.html"><i class="fas fa-plus-circle"></i> Nuevo</a></li>
+                            <li><a href="recibirPedidos.html"><i class="fas fa-receipt"></i> Recibir Pedidos</a></li>
+                            <li><a href="lista-proyectos.html"><i class="fas fa-list"></i> Lista Proyecto</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-box"></i> Transferencias
+                        <ul>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a
+                                    almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a
+                                    proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i> Reportes
+                        <ul>
+                            <li><a href="#"><i class="fas fa-project-diagram"></i> Avance en proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i> Inventario de proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Insulto Faltantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-        <form class="form-registro-horas">
-            <div>
-                <div class="div-nombre">
+        <section>
 
-                    <div class="campo">
-                        <label for="cedula">Cedula:</label>
-                        <input type="text" id="cedula" name="cedula" required>
+            <form class="form-registro-horas">
+                <div>
+                    <div class="div-nombre">
+                        <div class="campo">
+                            <label for="cedula">Cédula:</label>
+                            <input type="text" id="cedula" name="cedula" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="primer_nombre">Primer Nombre:</label>
+                            <input type="text" id="primer_nombre" name="primer_nombre" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="segundo_nombre">Segundo Nombre:</label>
+                            <input type="text" id="segundo_nombre" name="segundo_nombre">
+                        </div>
                     </div>
 
+                    <div class="div-apellido">
+                        <div class="campo">
+                            <label for="primer_apellido">Primer Apellido:</label>
+                            <input type="text" id="primer_apellido" name="primer_apellido" required>
+                        </div>
 
-                    <div class="campo">
-
-                        <label for="primer_nombre">Primer Nombre:</label>
-                        <input type="text" id="primer_nombre" name="primer_nombre" required>
-
+                        <div class="campo">
+                            <label for="segundo_apellido">Segundo Apellido:</label>
+                            <input type="text" id="segundo_apellido" name="segundo_apellido" required>
+                        </div>
                     </div>
 
-                    <div class="campo">
-                        <label for="segundo_nombre">Segundo Nombre:</label>
-                        <input type="text" id="segundo_nombre" name="segundo_nombre" required>
-                    </div>
+                    <div class="div-horas">
+                        <div class="campo">
+                            <label for="proyecto">Proyecto:</label>
+                            <select id="proyecto" name="proyecto" required>
+                                <option value=""></option>
+                                <option value="proyecto 1">Proyecto 1</option>
+                                <option value="proyecto 2">Proyecto 2</option>
+                                <option value="proyecto 3">Proyecto 3</option>
+                                <option value="proyecto 4">Proyecto 4</option>
+                                <option value="proyecto 5">Proyecto 5</option>
+                                <option value="proyecto 6">Proyecto 6</option>
+                            </select>
+                        </div>
 
+                        <div class="campo">
+                            <label for="horas">Horas Trabajadas:</label>
+                            <input type="number" id="horas" name="horas" min="0" required>
+                        </div>
+                    </div>
                 </div>
 
+                <button id="BtnRegistrarHoras" type="submit">Registrar</button>
+            </form>
 
-                <div class="div-apellido">
-                    <div class="campo">
-                        <label for="primer_apellido">Primer Apellido:</label>
-                        <input type="text" id="primer_apellido" name="primer_apellido" required>
-                    </div>
+        </section>
 
-                    <div class="campo">
-                        <label for="segundo_apellido">Segundo Apellido:</label>
-                        <input type="text" id="segundo_apellido" name="segundo_apellido" required>
-                    </div>
-
-
-                </div>
-                <div class="div-horas">
-
-
-                    <div class="campo">
-                        <label for="proyecto">Proyecto:</label>
-                        <select id="cargo" name="cargo" required>
-                            <option value=""></option>
-                            <option value="proyecto 1">proyecto 1</option>
-                            <option value="proyecto 2">proyecto 2</option>
-                            <option value="proyecto 3">proyecto 3</option>
-                            <option value="proyecto 4">proyecto 4</option>
-                            <option value="proyecto 5">proyecto 5</option>
-                            <option value="proyecto 6">proyecto 6</option>
-
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label for="horas">Horas Trabajadas:</label>
-                        <input type="number" id="horas" name="horas" min="0" required>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <button type="submit">Registrar</button>
-        </form>
 
     </main>
     </div>
+
+    <script src="/frontend/src/assets/RegistroHoras.js"></script>
 </body>
 
 </html>

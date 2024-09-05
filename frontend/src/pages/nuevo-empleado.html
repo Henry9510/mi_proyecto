@@ -11,7 +11,7 @@
 </head>
 
 <body>
- 
+
     <header>
         <nav class="nav-cabecera">
 
@@ -51,47 +51,53 @@
 
     </header>
 
-    <main class="main-form">
+
+    <main class="main-index">
+        <!-- Barra de navegación lateral -->
         <aside class="nav-lateral">
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
                     <li>
                         <i class="fas fa-users"></i> Usuarios
                         <ul>
                             <li><a href="nuevo-empleado.html"><i class="fas fa-user-plus"></i> Registrar</a></li>
+                            <li><a href="lista-empleado.html"><i class="fas fa-list"></i> Lista Empleados</a></li>
                             <li><a href="registro-horas.html"><i class="fas fa-clock"></i> Registro de horas</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-box"></i> Inventario</a>
+                        <i class="fas fa-box"></i> Inventario
                         <ul>
                             <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
-                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a almacén</a></li>
-                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a proyecto</a></li>
-                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a></li>
                             <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-tachometer-alt"></i> Proyectos</a>
+                        <i class="fas fa-tachometer-alt"></i> Proyectos
                         <ul>
                             <li><a href="nuevo-proyecto.html"><i class="fas fa-plus-circle"></i> Nuevo</a></li>
                             <li><a href="recibirPedidos.html"><i class="fas fa-receipt"></i> Recibir Pedidos</a></li>
+                            <li><a href="lista-proyectos.html"><i class="fas fa-list"></i> Lista Proyecto</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-chart-line"></i> Reportes</a>
+                        <i class="fas fa-box"></i> Transferencias
+                        <ul>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a
+                                    almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a
+                                    proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i> Reportes
                         <ul>
                             <li><a href="#"><i class="fas fa-project-diagram"></i> Avance en proyecto</a></li>
                             <li><a href="#"><i class="fas fa-box"></i> Inventario de proyecto</a></li>
                             <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Insulto Faltantes</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-test-tube"></i> Test</a>
-                        <ul>
-                            <li><a href="pruebas.html"><i class="fas fa-vial"></i> Test</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -101,11 +107,11 @@
         <section>
             <h2>Gestión de Personal</h2>
             <h3>Registro de Empleado</h3>
-            <form class="form-nuevo-usuario">
+            <form class="form-nuevo-usuario" id="formEmpleado">
                 <div class="form-group div-nombre">
                     <div class="campo">
                         <label for="cedula">Cédula:</label>
-                        <input type="text" id="cedula" name="cedula" required>
+                        <input type="number" id="cedula" name="cedula" required>
                     </div>
                     <div class="campo">
                         <label for="primer_nombre">Primer Nombre:</label>
@@ -113,7 +119,7 @@
                     </div>
                     <div class="campo">
                         <label for="segundo_nombre">Segundo Nombre:</label>
-                        <input type="text" id="segundo_nombre" name="segundo_nombre" required>
+                        <input type="text" id="segundo_nombre" name="segundo_nombre">
                     </div>
                 </div>
                 <div class="form-group div-apellido">
@@ -123,7 +129,7 @@
                     </div>
                     <div class="campo">
                         <label for="segundo_apellido">Segundo Apellido:</label>
-                        <input type="text" id="segundo_apellido" name="segundo_apellido" required>
+                        <input type="text" id="segundo_apellido" name="segundo_apellido">
                     </div>
                     <div class="campo">
                         <label for="edad">Edad:</label>
@@ -133,27 +139,24 @@
                 <div class="form-group div-complemento">
                     <div class="campo">
                         <label for="cargo">Cargo:</label>
-                        <select id="cargo" name="cargo" required>
-                            <option value="">Seleccione una opción</option>
-                            <option value="recursos_humanos">Recursos Humanos</option>
-                            <option value="finanzas">Finanzas</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="it">IT</option>
-                            <option value="produccion">Producción</option>
-                        </select>
+                        <input type="text" id="cargo" name="cargo" required>
                     </div>
                     <div class="campo">
                         <label for="fecha_ingreso">Fecha de Ingreso:</label>
-                        <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+                        <input type="text" id="fecha_ingreso" name="fecha_ingreso" required>
                     </div>
                 </div>
                 <div class="btn-crear">
-                    <button type="submit">CREAR</button>
+                    <button type="submit" id="btnCrearEmpleado">CREAR</button>
                 </div>
             </form>
         </section>
 
+
+
     </main>
+
+    <script src="/frontend/src/assets/formEmpleado.js"></script>
 </body>
 
 </html>

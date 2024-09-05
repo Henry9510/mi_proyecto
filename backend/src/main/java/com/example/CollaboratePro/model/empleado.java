@@ -22,19 +22,19 @@ public class Empleado {
 
     int Cedula;
     String Nombre;
-    String SengundoNombre;
+    String SegundoNombre;
     String Apellido;
     String SegundoApellido;
     int Edad;
     String Cargo;
     String FechaIngreso;
 
-    public Empleado(int Cedula, String Nombre, String SengundoNombre, String Apellido, String SegundoApellido, int Edad,
+    public Empleado(int Cedula, String Nombre, String SegundoNombre, String Apellido, String SegundoApellido, int Edad,
             String Cargo, String FechaIngreso) {
 
         this.Cedula = Cedula;
         this.Nombre = Nombre;
-        this.SengundoNombre = SengundoNombre;
+        this.SegundoNombre = SegundoNombre;
         this.Apellido = Apellido;
         this.SegundoApellido = SegundoApellido;
         this.Edad = Edad;
@@ -70,12 +70,12 @@ public class Empleado {
         this.Nombre = Nombre;
     }
 
-    public String getSengundoNombre() {
-        return this.SengundoNombre;
+    public String getSegundoNombre() {
+        return this.SegundoNombre;
     }
 
-    public void setSengundoNombre(String SengundoNombre) {
-        this.SengundoNombre = SengundoNombre;
+    public void setSegundoNombre(String SegundoNombre) {
+        this.SegundoNombre = SegundoNombre;
     }
 
     public String getApellido() {

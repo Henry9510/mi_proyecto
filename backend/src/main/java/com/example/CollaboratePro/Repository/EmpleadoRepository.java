@@ -9,4 +9,5 @@ import com.example.CollaboratePro.model.Empleado;
 @Repository
 public interface EmpleadoRepository extends JpaRepository <Empleado, Long> {
 
+
 }

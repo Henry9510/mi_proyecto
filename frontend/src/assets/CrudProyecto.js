@@ -19,11 +19,10 @@ let listarProyectos = async () => {
     let contenidoTabla = "";
 
     for (let proyecto of proyectos) {
-        let contenidoFila = `
-            <tr>
-                <td>${proyecto.id}</td>
-                <td>${proyecto.nombre}</td>
-                <td>${proyecto.descripcion}</td>
+        let contenidoFila = `<td>${proyecto.id}</td>
+                <td>${proyecto.numeroProyecto}</td>
+                <td>${proyecto.descripcionProyecto}</td>                
+                 <td>${proyecto.horasEstimadas}</td>
                 <td><button onClick="editarProyecto(${proyecto.id})" class="btn-editar">Editar</button></td>
                 <td><button onClick="borrarProyecto(${proyecto.id})" class="btn-eliminar">Eliminar</button></td>
             </tr>
@@ -34,6 +33,8 @@ let listarProyectos = async () => {
     // Actualizar solo el contenido del tbody
     document.querySelector('#tablaProyectos tbody').innerHTML = contenidoTabla; // Corregido: innerHTML
 }
+
+
 
 let borrarProyecto = async (id) => {
     const respuesta = await fetch(`http://localhost:8080/api/proyecto/${id}`, {
@@ -65,6 +66,8 @@ function ocultarFormulario() {
     }
 }
 
+
+
 let idEditar;
 
 let editarProyecto = async (id) => {
@@ -85,9 +88,11 @@ let editarProyecto = async (id) => {
 
     document.getElementById("codigoProyecto").value = proyecto.codigoProyecto;
     document.getElementById("descripcionProyecto").value = proyecto.descripcionProyecto;
-    document.getElementById("horasProyecto").value = proyecto.horasProyecto;
+    document.getElementById("horasEstimadas").value = proyecto.horasEstimadas;
     // Asegúrate de que el formulario tiene los campos correspondientes
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let btnModificar = document.getElementById("btnModificar");

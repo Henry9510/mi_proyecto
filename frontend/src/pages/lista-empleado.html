@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="/frontend/src/styles/tablas.css"> <!-- Tu archivo CSS personalizado -->
 </head>
+
 <body>
     <header>
         <nav class="nav-cabecera">
 
             <div class="div-logo">
-                <a href="index.html"> <img src="/frontend/src/imag/logo.svg"> </a>
+                <a href="index.html"> <i class="fab fa-android"></i></a>
             </div>
 
-            <div class="div-buscar">
-                <h6>Buscar</h6>
-                <input class="box-buscar" type="text" placeholder="Buscar">
+            <div class="nombreUsuario">
+                <p>Hola bienvenido...</p>
             </div>
 
 
             <ul class="nav-list">
                 <li>
-                    <img src="/frontend/src/imag/gear.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-cogs toggle-btn"></i>
                     <ul class="config">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <img src="/frontend/src/imag/alert.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-bell toggle-btn"></i>
                     <ul class="alert">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <img src="/frontend/src/imag/avatar.svg" width="32px" class="toggle-btn">
+                    <i class="fas fa-user toggle-btn"></i>
                     <ul class="login">
                         <li><a href="#">Subelemento 1</a></li>
                         <li><a href="#">Subelemento 2</a></li>
@@ -45,29 +49,147 @@
         </nav>
 
     </header>
-    
 
-    <h2>Gestión de Proyectos</h2>
-            <div class="card">
-                <h3>Insumos Consumidos</h3>
-                <!-- Tabla de insumos -->
-                <table>
+
+    <main class="main-index">
+        <!-- Barra de navegación lateral -->
+        <aside class="nav-lateral">
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li>
+                        <i class="fas fa-users"></i> Usuarios
+                        <ul>
+                            <li><a href="nuevo-empleado.html"><i class="fas fa-user-plus"></i> Registrar</a></li>
+                            <li><a href="lista-empleado.html"><i class="fas fa-list"></i> Lista Empleados</a></li>
+                            <li><a href="registro-horas.html"><i class="fas fa-clock"></i> Registro de horas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-box"></i> Inventario
+                        <ul>
+                            <li><a href="nuevo-producto.html"><i class="fas fa-box-open"></i> Crear producto</a></li>
+                            <li><a href="lista-insumo.html"><i class="fas fa-cogs"></i> Almacén</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-tachometer-alt"></i> Proyectos
+                        <ul>
+                            <li><a href="nuevo-proyecto.html"><i class="fas fa-plus-circle"></i> Nuevo</a></li>
+                            <li><a href="recibirPedidos.html"><i class="fas fa-receipt"></i> Recibir Pedidos</a></li>
+                            <li><a href="lista-proyectos.html"><i class="fas fa-list"></i> Lista Proyecto</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-box"></i> Transferencias
+                        <ul>
+                            <li><a href="transferirAlmacen.html"><i class="fas fa-warehouse"></i> Transferir a
+                                    almacén</a></li>
+                            <li><a href="transferirProyecto.html"><i class="fas fa-project-diagram"></i> Transferir a
+                                    proyecto</a></li>
+                            <li><a href="listaTransferencia.html"><i class="fas fa-list"></i> Lista de Transferencia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i> Reportes
+                        <ul>
+                            <li><a href="#"><i class="fas fa-project-diagram"></i> Avance en proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i> Inventario de proyecto</a></li>
+                            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Insulto Faltantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section>
+            <table id="tablaEmpleados">
+                <thead>
                     <tr>
-                        <th>Proyecto</th>
-                        <th>Insumo</th>
-                        <th>Cantidad</th>
+                        <th colspan="11">Empleados</th>
                     </tr>
                     <tr>
-                        <td>Proyecto A</td>
-                        <td>Item 1</td>
-                        <td>10</td>
+                        <th>ID</th>
+                        <th>Cédula</th>
+                        <th>Primer Nombre</th>
+                        <th>Segundo Nombre</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Edad</th>
+                        <th>Cargo</th>
+                        <th>Fecha de Ingreso</th>
+                        <th colspan="2">Opciones</th>
                     </tr>
-                    <tr>
-                        <td>Proyecto B</td>
-                        <td>Item 2</td>
-                        <td>5</td>
-                    </tr>
-                </table>
+                </thead>
+                <tbody>
+                    <!-- Las filas de datos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+
+
+        </section>
+
+        <section class="form-section">
+            <div class="div-edit">
+                <div style="background-color: antiquewhite;">
+                    <h2>Gestión de Empleados</h2>
+                </div>
+                <h1>Editar Empleado</h1>
+                <form class="form-nuevo-usuario" id="formEditarEmpleado">
+                    <div class="form-group div-nombre">
+                        <div class="campo">
+                            <label for="cedula">Cédula:</label>
+                            <input type="number" id="cedula" name="cedula" required>
+                        </div>
+                        <div class="campo">
+                            <label for="primer_nombre">Primer Nombre:</label>
+                            <input type="text" id="primer_nombre" name="primer_nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="segundo_nombre">Segundo Nombre:</label>
+                            <input type="text" id="segundo_nombre" name="segundo_nombre">
+                        </div>
+                    </div>
+                    <div class="form-group div-apellido">
+                        <div class="campo">
+                            <label for="primer_apellido">Primer Apellido:</label>
+                            <input type="text" id="primer_apellido" name="primer_apellido" required>
+                        </div>
+                        <div class="campo">
+                            <label for="segundo_apellido">Segundo Apellido:</label>
+                            <input type="text" id="segundo_apellido" name="segundo_apellido">
+                        </div>
+                        <div class="campo">
+                            <label for="edad">Edad:</label>
+                            <input class="i-edad" type="number" id="edad" name="edad" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-group div-complemento">
+                        <div class="campo">
+                            <label for="cargo">Cargo:</label>
+                            <input type="text" id="cargo" name="cargo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                            <input type="text" id="fecha_ingreso" name="fecha_ingreso" required>
+                        </div>
+                    </div>
+                    <div class="btnModificar">
+                        <button id="btnModificarEmpleado" type="submit">Guardar</button>
+                    </div>
+                </form>
             </div>
+        </section>
+        </div>
+    </main>
+
+
+    <script src="https://use.fontawesome.com/bf66789927.js"></script>
+    <script src="/frontend/src/assets/CrudEmpleado.js"></script>
 </body>
+
+
+
+
 </html>

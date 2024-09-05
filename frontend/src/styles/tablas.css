@@ -47,8 +47,8 @@ a {
 }
 
 /* Estilo para los botones de acción */
-#tablaProductos .btn-editar,
-#tablaProductos .btn-eliminar {
+.btn-editar,
+.btn-eliminar {
     background-color: #007bff; /* Color de fondo para los botones */
     color: #fff; /* Color del texto en los botones */
     border: none; /* Sin bordes */
@@ -61,17 +61,17 @@ a {
 }
 
 /* Estilo para los botones de eliminar */
-#tablaProductos .btn-eliminar {
+ .btn-eliminar {
     background-color: #dc3545; /* Color de fondo para el botón de eliminar */
 }
 
 /* Estilo para los botones al pasar el ratón */
-#tablaProductos .btn-editar:hover,
-#tablaProductos .btn-eliminar:hover {
+ .btn-editar:hover,
+.btn-eliminar:hover {
     background-color: #0056b3; /* Color de fondo al pasar el ratón para el botón de editar */
 }
 
 /* Estilo específico para el botón de eliminar al pasar el ratón */
-#tablaProductos .btn-eliminar:hover {
+ .btn-eliminar:hover {
     background-color: #c82333; /* Color de fondo al pasar el ratón para el botón de eliminar */
 }

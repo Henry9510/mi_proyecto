@@ -1,7 +1,7 @@
 
-Document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // Selección del botón y asignación del evento
-    let botonCrear = document.getElementById("btncrear");
+    let botonCrear = document.getElementById("btnNuevoProyecto");
 
     if (botonCrear) {
         botonCrear.addEventListener("click", async evento => {
@@ -17,7 +17,7 @@ Document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('horasEstimadas').value = '';
         });
     } else {
-        console.error('El botón con ID "btncrear" no se encuentra en el DOM.');
+        console.error('El botón con ID no se encuentra en el DOM.');
     }
 });
 
