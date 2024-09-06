@@ -3,7 +3,7 @@
     --color-Secundario: #fff;
     --color-box: #EBEDF1;
     --color-contenedores: #6482AD;
-    --font-size: 12px;
+    --font-size: 10px;
 
 }
 
@@ -12,6 +12,7 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
+    font-size: .80rem;
     background-color: var(--color-Secundario);
 }
 
@@ -23,7 +24,14 @@ header {
     margin: 0;
     border-bottom: var(--color-box) solid;
 
+}
 
+
+h3{
+    width: 100%;
+    text-align: left;
+    border-bottom: solid black 1px ;
+    padding: 5px;
 }
 
 a {
@@ -87,7 +95,7 @@ a {
     padding: 0;
     flex: 1; /* Ocupa el espacio disponible a la derecha */
     justify-content: flex-end; /* Alinea los elementos a la derecha */
-    font-size: 25px;
+    
     
 }
 
@@ -277,31 +285,31 @@ a {
 /* Estilo para el título de la tabla */
 .table-container-1 h2 {
     margin-bottom: 20px;
-    font-size: 24px;
     color: #333;
 }
 
 /* Estilo para la tabla */
 table {
-    width: 100%;
+    width: 120%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
+    
 }
 
 /* Estilo para las celdas del encabezado */
 thead th {
     background-color: #4e88c5; /* Color de fondo del encabezado */
     color: #fff; /* Color del texto del encabezado */
-    padding: 10px;
-    text-align: left;
+    padding: 7px;
     border-bottom: 2px solid #8297ad; /* Línea debajo del encabezado */
+    text-align: center;
 }
 
 /* Estilo para las celdas del cuerpo */
 tbody td {
     padding: 10px;
     border-bottom: 1px solid #ddd; /* Línea debajo de cada fila */
-    text-align: left;
+    text-align: center;
 }
 
 /* Estilo para la fila activa (hover) */

@@ -55,7 +55,7 @@ a {
     padding: 5px 10px; /* Espacio interno en los botones */
     border-radius: 3px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
-    font-size: 14px; /* Tamaño de fuente en los botones */
+    font-size: 10px; /* Tamaño de fuente en los botones */
     margin: 0 5px; /* Espacio entre los botones */
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
