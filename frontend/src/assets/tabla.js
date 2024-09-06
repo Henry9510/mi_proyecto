@@ -1,6 +1,9 @@
 window.onload = function () {
     listarProductos();
+  
 }
+
+
 
 
 
@@ -106,7 +109,7 @@ let editarProducto = async (id) => {
 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let btnModificar = document.getElementById("btnModificar");
     if (btnModificar) {
         btnModificar.addEventListener("click", evento => {
@@ -124,7 +127,7 @@ let aplicarActualizacion = async (id) => {
 
     // Recopilar datos de los campos del formulario
     let campos = {
-        
+
         id: id,  // Usa el ID que recibes como parámetro
         nombre: document.getElementById('nombre').value,
         unidad: document.getElementById('unidad').value,
@@ -137,7 +140,7 @@ let aplicarActualizacion = async (id) => {
 
     try {
         // Realizar la solicitud PUT
-        const respuesta = await fetch("http://localhost:8080/api/producto/"+id, {
+        const respuesta = await fetch("http://localhost:8080/api/producto/" + id, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -150,7 +153,7 @@ let aplicarActualizacion = async (id) => {
         if (!respuesta.ok) {
             const errorText = await respuesta.text();
             throw new Error(`Error en la solicitud: ${respuesta.status} ${respuesta.statusText} - ${errorText}`);
-        
+
 
         }
 

@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
 </head>
+<style>
+    .campo {
+        margin-bottom: 1em;
+    }
+
+    .campo label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    .campo input {
+        width: 100%;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    #BtnRegistrarHoras {
+        padding: 0.5em 1em;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #BtnRegistrarHoras:hover {
+        background-color: #0056b3;
+    }
+</style>
 
 
 <body>
@@ -103,25 +132,28 @@
             </nav>
         </aside>
 
-        <section>
+        <section style="display: flex;flex-direction:column; width: 100%;align-items: center; ">
 
-            <form class="form-registro-horas">
-                <div>
-                    <div class="div-nombre">
-                        <div class="campo">
-                            <label for="cedula">Cédula:</label>
-                            <input type="text" id="cedula" name="cedula" required>
-                        </div>
+            <section>
+                <form id="formregistrohoras" class="form-registro-horas" >
+                    <div class="campo">
+                        <label for="fecha">Fecha:</label>
+                        <input type="text" id="fecha" name="fecha" required>
+                    </div>
 
-                        <div class="campo">
-                            <label for="primer_nombre">Primer Nombre:</label>
-                            <input type="text" id="primer_nombre" name="primer_nombre" required>
-                        </div>
+                    <div class="campo">
+                        <label for="cedula">Cédula:</label>
+                        <input type="text" id="cedula" name="cedula" required>
+                    </div>
 
-                        <div class="campo">
-                            <label for="segundo_nombre">Segundo Nombre:</label>
-                            <input type="text" id="segundo_nombre" name="segundo_nombre">
-                        </div>
+                    <div class="campo">
+                        <label for="primer_nombre">Primer Nombre:</label>
+                        <input type="text" id="primer_nombre" name="primer_nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="segundo_nombre">Segundo Nombre:</label>
+                        <input type="text" id="segundo_nombre" name="segundo_nombre">
                     </div>
 
                     <div class="div-apellido">
@@ -132,22 +164,14 @@
 
                         <div class="campo">
                             <label for="segundo_apellido">Segundo Apellido:</label>
-                            <input type="text" id="segundo_apellido" name="segundo_apellido" required>
+                            <input type="text" id="segundo_apellido" name="segundo_apellido">
                         </div>
                     </div>
 
                     <div class="div-horas">
                         <div class="campo">
                             <label for="proyecto">Proyecto:</label>
-                            <select id="proyecto" name="proyecto" required>
-                                <option value=""></option>
-                                <option value="proyecto 1">Proyecto 1</option>
-                                <option value="proyecto 2">Proyecto 2</option>
-                                <option value="proyecto 3">Proyecto 3</option>
-                                <option value="proyecto 4">Proyecto 4</option>
-                                <option value="proyecto 5">Proyecto 5</option>
-                                <option value="proyecto 6">Proyecto 6</option>
-                            </select>
+                            <input type="number" id="proyecto" name="proyecto" min="0" required>
                         </div>
 
                         <div class="campo">
@@ -155,18 +179,17 @@
                             <input type="number" id="horas" name="horas" min="0" required>
                         </div>
                     </div>
-                </div>
 
-                <button id="BtnRegistrarHoras" type="submit">Registrar</button>
-            </form>
-
-        </section>
+                    <button id="BtnRegistrarHoras" type="submit">Registrar</button>
+                </form>
+            </section>
 
 
     </main>
     </div>
 
     <script src="/frontend/src/assets/RegistroHoras.js"></script>
+    <script src="/frontend/src/assets/formRegistroHoras.js"></script>
 </body>
 
 </html>
