@@ -16,15 +16,16 @@ section {
     align-items: center;
     align-content: center;
     width: 100%;
-    padding-top: 20px;
-       
+    padding-top: 20px;    
 }
+
 
 /* Estilo del título */
 h2 {
     text-align: center;
     color: #333;
 }
+
 a {
     text-decoration: none;
 }
@@ -44,6 +45,7 @@ a {
     color: #555;
 }
 
+
 /* Estilo de los campos de entrada */
 .form-producto input[type="text"],
 .form-producto input[type="number"] {
@@ -52,6 +54,7 @@ a {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 
 /* Estilo del botón */
 .btn-newcrear button{
@@ -63,6 +66,7 @@ a {
     cursor: pointer;
     font-size: 16px;
 }
+
 
 .btn-newcrear button:hover {
     background-color: #3caf25;

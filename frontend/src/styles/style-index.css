@@ -11,6 +11,7 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 body{
     font-size: .80rem;
     background-color: var(--color-Secundario);
@@ -23,14 +24,12 @@ header {
     background-color: var(--color-Secundario);
     margin: 0;
     border-bottom: var(--color-box) solid;
-
 }
 
 
 h3{
     width: 100%;
     text-align: left;
-    border-bottom: solid black 1px ;
     padding: 5px;
 }
 
@@ -160,7 +159,6 @@ a {
     background-color:#fff;
     color:#6482AD;
     padding-top: 5vh;
-    height: 100vh;
     padding: 5vh;
 
 }
@@ -290,7 +288,7 @@ a {
 
 /* Estilo para la tabla */
 table {
-    width: 120%;
+    width: 80%;
     border-collapse: collapse;
     font-family: Roboto, sans-serif;
     
@@ -322,3 +320,4 @@ tbody tr:hover {
 tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
 }
+

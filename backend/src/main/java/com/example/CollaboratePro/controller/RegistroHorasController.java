@@ -22,11 +22,13 @@ import com.example.CollaboratePro.model.registro_horas;
 public class RegistroHorasController {
 
     public final RegistroHorasRepository repositorio; 
+
     public RegistroHorasController(RegistroHorasRepository repository)
     {
         this.repositorio = repository;
 
     }
+    
      @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/api/registro_horas")
     public List<registro_horas> obtenerRegistroHoras() {

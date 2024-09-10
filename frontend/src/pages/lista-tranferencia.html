@@ -102,48 +102,51 @@
 
         <section>
             <h2>Gestión de Materia Prima</h2>
-            <div>
-                <div class="card">
-                    <h3>Registro de Transferencias</h3>
-                    <input type="text" placeholder="Buscar">
+            <div class="tranferenciaProyecto">
+                <h3>Solicitud de Materia Prima</h3>
+                <form id="materialForm">
+                    <label for="fecha">Fecha:</label>
+                    <input type="text" id="fecha" name="fecha" required><br><br>
 
-                </div>
-                <div>
+                    <label for="Proyecto">Proyecto:</label>
+                    <input type="text" id="Proyecto" name="Proyecto" required><br><br>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>id Transferencia</th>
-                                <th>Proyecto</th>
-                                <th>fecha</th>
-                                <th>usuario</th>
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required><br><br>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2256</td>
-                                <td>Proyecto a</td>
-                                <td>2-9-2024</td>
-                                <td>henry</td>
-                                <td> <a href="transferencia.html"> abrir </a> </td>
-                            </tr>
-                            <tr>
-                                <td>2256</td>
-                                <td>Proyecto a</td>
-                                <td>2-9-2024</td>
-                                <td>henry</td>
-                                <td> <a href=" "> abrir </a> </td>
-                            </tr>
-                            <tr>
-                                <td>2256</td>
-                                <td>Proyecto a</td>
-                                <td>2-9-2024</td>
-                                <td>henry</td>
-                                <td> <a href=" "> abrir </a> </td>
-                            </tr>
-                        </tbody>
+                    <label for="nombre">Descripción:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
 
+                    <label for="partNumber">Número de Parte:</label>
+                    <input type="text" id="partNumber" name="partNumber" required><br><br>
+
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" required><br><br>
+
+                    <button type="submit">Agregar</button>
+                </form>
+
+                <h3>Listado de Materiales</h3>
+                <table id="materialList">
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Número de Parte</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <button id="solicitarTodos">Solicitar Todos</button>
+
+                <div class="pedido">
+                    <h3>Pedidos Registrados</h3>
+                    <ul id="pedidosList">
+                    </ul>
                 </div>
             </div>
 
