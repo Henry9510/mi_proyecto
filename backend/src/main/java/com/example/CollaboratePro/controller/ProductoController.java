@@ -3,10 +3,8 @@ package com.example.CollaboratePro.controller;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -68,6 +66,7 @@ public class ProductoController {
         }
         
         // Update the existing product with new values
+        existingProducto.setCodigo(Producto.getCodigo());
         existingProducto.setNombre(Producto.getNombre());
         existingProducto.setUnidad(Producto.getUnidad());
         existingProducto.setMaterial(Producto.getMaterial());

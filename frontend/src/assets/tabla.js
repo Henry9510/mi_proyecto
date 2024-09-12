@@ -29,6 +29,7 @@ let listarProductos = async () => {
         let contenidoFila = `
                 <tr>
                     <td>${producto.id}</td>
+                     <td>${producto.codigo}</td>
                     <td>${producto.nombre}</td>
                     <td>${producto.partNumber}</td>
                     <td>${producto.unidad}</td>
@@ -99,6 +100,7 @@ let editarProducto = async (id) => {
 
     console.log('Producto recibido:', producto);
 
+    document.getElementById("codigo").value = producto.codigo;
     document.getElementById("nombre").value = producto.nombre;
     document.getElementById("partNumber").value = producto.partNumber;
     document.getElementById("unidad").value = producto.unidad;
@@ -129,6 +131,7 @@ let aplicarActualizacion = async (id) => {
     let campos = {
 
         id: id,  // Usa el ID que recibes como parámetro
+        codigo: document.getElementById('codigo').value,
         nombre: document.getElementById('nombre').value,
         unidad: document.getElementById('unidad').value,
         material: document.getElementById('material').value,

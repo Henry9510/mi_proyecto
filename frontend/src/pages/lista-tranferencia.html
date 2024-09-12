@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/src/styles/style-index.css"> <!-- Tu archivo CSS personalizado -->
+
 </head>
 
 <body>
@@ -105,54 +108,36 @@
             <div class="tranferenciaProyecto">
                 <h3>Solicitud de Materia Prima</h3>
                 <form id="materialForm">
-                    <label for="fecha">Fecha:</label>
-                    <input type="text" id="fecha" name="fecha" required><br><br>
+                    <label for="buscar">Buscar:</label>
+                    <input type="buscar" id="buscar" name="busar"><br><br>
 
-                    <label for="Proyecto">Proyecto:</label>
-                    <input type="text" id="Proyecto" name="Proyecto" required><br><br>
 
-                    <label for="codigo">Código:</label>
-                    <input type="text" id="codigo" name="codigo" required><br><br>
-
-                    <label for="nombre">Descripción:</label>
-                    <input type="text" id="nombre" name="nombre" required><br><br>
-
-                    <label for="partNumber">Número de Parte:</label>
-                    <input type="text" id="partNumber" name="partNumber" required><br><br>
-
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" required><br><br>
-
-                    <button type="submit">Agregar</button>
                 </form>
 
                 <h3>Listado de Materiales</h3>
-                <table id="materialList">
+                <table id="Transferlist">
                     <thead>
                         <tr>
+                            <th>Fecha</th>
+                            <th>REQ</th>
                             <th>Proyecto</th>
-                            <th>Código</th>
-                            <th>Descripción</th>
-                            <th>Número de Parte</th>
-                            <th>Cantidad</th>
+                            <th>Usuario</th>
                         </tr>
                     </thead>
                     <tbody>
                     </tbody>
                 </table>
 
-                <button id="solicitarTodos">Solicitar Todos</button>
 
-                <div class="pedido">
-                    <h3>Pedidos Registrados</h3>
-                    <ul id="pedidosList">
-                    </ul>
-                </div>
+
             </div>
 
         </section>
+      
+        
+<script src="/frontend/src/assets/listarTransferencia.js"></script>
 
 </body>
-</body>
+
 
 </html>

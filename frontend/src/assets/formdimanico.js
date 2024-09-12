@@ -1,22 +1,68 @@
-// Función para abrir la pestaña especificada
-function openTab(evt, tabName) {
-    // Obtener todos los elementos con la clase "tabcontent" y ocultarlos
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+
+
+
+
+
+let timeoutId; // Variable para almacenar el identificador del temporizador
+
+document.getElementById('codigo').addEventListener('input', function () {
+    // Limpia el temporizador anterior si existe
+    clearTimeout(timeoutId);
+
+    // Configura un nuevo temporizador para hacer la búsqueda después de 500 ms
+    timeoutId = setTimeout(buscarInsumo, 500);
+});
+
+async function buscarInsumo() {
+    const ProductoBuscado = document.getElementById('codigo').value.trim();
+    
+    // Convertir la cédula a número si es necesario
+    const CodigoProductoNumero = parseInt(ProductoBuscado, 10);
+    if (!CodigoProductoNumero) {
+        // Si no hay cédula, no hacer nada
+        return;
     }
-    // Obtener todos los elementos con la clase "tablinks" y eliminar la clase "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    try {
+        const respuesta = await fetch(`http://localhost:8080/api/producto`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        });
+
+        if (!respuesta.ok) {
+            throw new Error(`Error en la respuesta de la red: ${respuesta.statusText}`);
+        }
+
+        const producto = await respuesta.json(); // Aquí se espera que sea un objeto, no un array
+
+        console.log('Datos recibidos:', producto);
+
+        console.log('Cédula Buscada:', CodigoProductoNumero);
+
+        const ProductoEncontrado = producto.find(prod => prod.codigo === CodigoProductoNumero);
+
+        if (ProductoEncontrado) {
+            console.log('Empleado encontrado:', ProductoEncontrado);
+
+            
+            
+            // Actualiza los campos del formulario
+            document.getElementById('nombre').value = ProductoEncontrado.nombre || '';
+            document.getElementById('partNumber').value = ProductoEncontrado.partNumber || '';
+        } else {
+         
+            // Limpiar los campos si no se encuentra el empleado
+            document.getElementById('nombre').value = '';
+            document.getElementById('partNumber').value = '';
+            console.log('No se encontró ningún ');
+        }
+
+    } catch (error) {
+        console.error('Error:', error);
+        console.log('Hubo un problema al buscar ' + error.message);
     }
-    // Mostrar la pestaña actual y agregar una clase "active" al botón que abrió la pestaña
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
 }
 
-// Abrir la primera pestaña por defecto
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.tab button').click();
-});

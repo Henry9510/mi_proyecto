@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.CollaboratePro.Repository.TransferenciaProjectRepository;
-import com.example.CollaboratePro.model.transferencia_proyecto;
+import com.example.CollaboratePro.model.TransferenciaProyecto;
 
 
 
 @RestController
-public class TranferenciaProjectController {
+public class TransferenciaProjectController {
 
 
 
@@ -28,7 +28,7 @@ public class TranferenciaProjectController {
     public final TransferenciaProjectRepository repositorio; 
 
 
-    public TranferenciaProjectController(TransferenciaProjectRepository repository)
+    public TransferenciaProjectController(TransferenciaProjectRepository repository)
     {
         this.repositorio = repository;
 
@@ -36,43 +36,47 @@ public class TranferenciaProjectController {
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/api/transferencia_proyecto")
-    public List<transferencia_proyecto> obtenerTransferenciaProyectos() {
+    public List<TransferenciaProyecto> obtenerTransferenciaProyectos() {
         return repositorio.findAll();
     }
 
     
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    @GetMapping("/transferencia_proyecto/{id}")
-    public ResponseEntity<transferencia_proyecto> obtenerTransferenciaProyecto(@PathVariable Long id) {
-        Optional<transferencia_proyecto> opt = repositorio.findById(id);
+    @GetMapping("api/transferencia_proyecto/{id}")
+    public ResponseEntity<TransferenciaProyecto> obtenerTransferenciaProyecto(@PathVariable Long id) {
+        Optional<TransferenciaProyecto> opt = repositorio.findById(id);
         
         return opt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    @PostMapping("/transferencia_proyecto")
-    public ResponseEntity<transferencia_proyecto> guardarTransferenciaProyecto(@RequestBody transferencia_proyecto transferenciaProyecto) {
+    @PostMapping("/api/transferencia_proyecto")
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
+    public ResponseEntity<TransferenciaProyecto> guardarTransferenciaProyecto(@RequestBody TransferenciaProyecto TransferenciaProyecto ) {
         // Verifica si el proyecto tiene un ID ya establecido
-        if (transferenciaProyecto.getIdTranferenciaProyecto() != 0) {
+        if (TransferenciaProyecto.getIdTranferenciaProyecto() != 0) {
             // Retorna un error 400 Bad Request si el ID ya está presente
             return ResponseEntity.badRequest().build();
         }
 
-        // Guarda el nuevo proyecto en la base de datos
-        transferencia_proyecto savedTransferenciaProyecto = repositorio.save(transferenciaProyecto);
-
-        // Retorna el proyecto guardado con estado HTTP 201 Created
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedTransferenciaProyecto);
+     repositorio.save((TransferenciaProyecto));
+     return ResponseEntity.ok(TransferenciaProyecto);
     }
 
-    @PutMapping("/transferencia_proyecto/{id}")
-    public ResponseEntity<transferencia_proyecto> actualizarTransferenciaProyecto(@PathVariable Long id, @RequestBody transferencia_proyecto transferenciaProyecto) {
+
+
+
+
+
+
+    @PutMapping("/api/transferencia_proyecto/{id}")
+    public ResponseEntity<TransferenciaProyecto> actualizarTransferenciaProyecto(@PathVariable Long id, @RequestBody TransferenciaProyecto TransferenciaProyecto) {
         // Verifica si el proyecto con el ID dado existe
         if (!repositorio.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
 
         // Recupera el proyecto existente
-        transferencia_proyecto existingTransferenciaProyecto = repositorio.findById(id).orElse(null);
+        TransferenciaProyecto existingTransferenciaProyecto = repositorio.findById(id).orElse(null);
 
         if (existingTransferenciaProyecto == null) {
             return ResponseEntity.notFound().build();
@@ -81,7 +85,7 @@ public class TranferenciaProjectController {
        
 
         // Guarda el proyecto actualizado
-        transferencia_proyecto updatedTransferenciaProyecto = repositorio.save(existingTransferenciaProyecto);
+        TransferenciaProyecto updatedTransferenciaProyecto = repositorio.save(existingTransferenciaProyecto);
 
         // Retorna el proyecto actualizado con un estado HTTP 200 OK
         return ResponseEntity.ok(updatedTransferenciaProyecto);

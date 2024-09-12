@@ -19,6 +19,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     
+    int codigo;
     String Nombre;
     String PartNumber;
     String Unidad;
@@ -31,7 +32,7 @@ public class Producto {
         super();
     }
 
-    public Producto( String Nombre, String PartNumber, String Unidad, String Procedencia, String Material, int Precio) {
+    public Producto( String Nombre, String PartNumber, String Unidad, String Procedencia, String Material, int Precio,int codigo) {
         
         this.Nombre = Nombre;
         this.PartNumber = PartNumber;
@@ -39,16 +40,28 @@ public class Producto {
         this.Procedencia = Procedencia;
         this.Material = Material;
         this.Precio = Precio;
+        this.codigo = codigo;
     }
     
+
+  
+
 
     public long getId() {
         return this.id;
     }
 
-   
-  
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public int getCodigo() {
+        return this.codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
     public String getNombre() {
         return this.Nombre;
@@ -97,7 +110,7 @@ public class Producto {
     public void setPrecio(int Precio) {
         this.Precio = Precio;
     }
-
+   
 
 
     

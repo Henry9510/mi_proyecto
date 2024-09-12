@@ -2,8 +2,8 @@ package com.example.CollaboratePro.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.CollaboratePro.model.transferencia_proyecto;
+import com.example.CollaboratePro.model.TransferenciaProyecto;
 
-public interface TransferenciaProjectRepository extends   JpaRepository <transferencia_proyecto, Long>{
+public interface TransferenciaProjectRepository extends   JpaRepository <TransferenciaProyecto, Long>{
 
 }

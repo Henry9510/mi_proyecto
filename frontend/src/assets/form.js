@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
             registrarProducto();
 
             // Limpiar los campos del formulario
+            document.getElementById('codigo').value = '';
             document.getElementById('nombre').value = '';
-            document.getElementById('PartNumber').value = '';
+            document.getElementById('partNumber').value = '';
             document.getElementById('unidad').value = '';
             document.getElementById('procedencia').value = '';
             document.getElementById('material').value = '';
@@ -25,8 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
 let registrarProducto = async () => {
     // Recolecta los datos del formulario
     let campos = {
+        codigo: document.getElementById('codigo').value.trim(),
         nombre: document.getElementById('nombre').value.trim(),
-        partNumber: document.getElementById('PartNumber').value.trim(),
+        partNumber: document.getElementById('partNumber').value.trim(),
         unidad: document.getElementById('unidad').value.trim(),
         procedencia: document.getElementById('procedencia').value.trim(),
         material: document.getElementById('material').value.trim(),
