@@ -19,7 +19,7 @@ let realizarRegistro = async () => {
     let campoHoras = {
         fecha: document.getElementById("fecha").value.trim(),
         usuario: parseInt(document.getElementById('cedula').value.trim(), 10),
-        empleador: parseInt(document.getElementById('cedula').value.trim(), 10),
+        empleado: parseInt(document.getElementById('cedula').value.trim(), 10),
         proyecto: parseInt(document.getElementById('proyecto').value.trim(), 10),
         horasTrabajadasnar: parseInt(document.getElementById('horas').value.trim(), 10)
     };

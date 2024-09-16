@@ -17,6 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.CollaboratePro.Repository.EmpleadoRepository;
 import com.example.CollaboratePro.model.Empleado;
 
+
+
+
+
 @RestController
 public class EmpleadoController {
 

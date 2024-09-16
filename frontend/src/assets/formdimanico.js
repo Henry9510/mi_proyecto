@@ -1,8 +1,5 @@
 
 
-
-
-
 let timeoutId; // Variable para almacenar el identificador del temporizador
 
 document.getElementById('codigo').addEventListener('input', function () {

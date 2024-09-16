@@ -3,10 +3,8 @@ package com.example.CollaboratePro.controller;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.CollaboratePro.Repository.ProyectoRepository;
 import com.example.CollaboratePro.model.Proyecto;
+
+
 
 @RestController
 public class ProyectoController {

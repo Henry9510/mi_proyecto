@@ -9,10 +9,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+
+
+
+
 /**
- *
- * @author Henry
+@OneToOne: Relación uno a uno, donde cada entidad A tiene una instancia única de entidad B y viceversa.
+@OneToMany: Relación uno a muchos, donde una entidad A puede estar relacionada con muchas instancias de entidad B.
+@ManyToOne: Relación muchos a uno, donde muchas instancias de entidad A están relacionadas con una sola instancia de entidad B.
+@ManyToMany: Relación muchos a muchos, donde muchas instancias de entidad A están relacionadas con muchas instancias de entidad B.
  */
+
+ 
 @Entity
 public class almacen {
     @Id

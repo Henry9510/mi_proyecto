@@ -18,6 +18,10 @@ import com.example.CollaboratePro.Repository.RegistroHorasRepository;
 import com.example.CollaboratePro.model.registro_horas;
 
 
+
+
+
+
 @RestController
 public class RegistroHorasController {
 
@@ -77,7 +81,7 @@ public class RegistroHorasController {
         }
 
            // Update the existing product with new values
-        existingProyecto.setEmpleador(registro_horas.getEmpleador());
+        existingProyecto.setEmpleado(registro_horas.getEmpleado());
         existingProyecto.setFecha(registro_horas.getFecha());
         existingProyecto.setHorasTrabajadasnar(registro_horas.getHorasTrabajadasnar());
         existingProyecto.setProyecto(registro_horas.getProyecto());

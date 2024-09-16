@@ -25,7 +25,7 @@ public class registro_horas {
     int HorasTrabajadasnar;
     int Proyecto;
     int Usuario;
-    int Empleador;
+    int Empleado;
 
 
     public registro_horas() {
@@ -33,13 +33,13 @@ public class registro_horas {
     }
 
 
-    public registro_horas( String Fecha, int HorasTrabajadasnar, int Proyecto, int Usuario, int Empleador) {
+    public registro_horas( String Fecha, int HorasTrabajadasnar, int Proyecto, int Usuario, int Empleado) {
      
         this.Fecha = Fecha;
         this.HorasTrabajadasnar = HorasTrabajadasnar;
         this.Proyecto = Proyecto;
         this.Usuario = Usuario;
-        this.Empleador = Empleador;
+        this.Empleado = Empleado;
     }
     
 
@@ -82,12 +82,12 @@ public class registro_horas {
         this.Usuario = Usuario;
     }
 
-    public int getEmpleador() {
-        return this.Empleador;
+    public int getEmpleado() {
+        return this.Empleado;
     }
 
-    public void setEmpleador(int Empleador) {
-        this.Empleador = Empleador;
+    public void setEmpleado(int Empleado) {
+        this.Empleado = Empleado;
     }
 
 

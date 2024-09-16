@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.CollaboratePro.Repository.ProductoRepository;
 import com.example.CollaboratePro.model.Producto;
 
+
+
 @RestController
 public class ProductoController {
 
