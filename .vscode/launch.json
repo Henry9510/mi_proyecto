@@ -8,6 +8,17 @@
             "mainClass": "com.example.CollaboratePro.CollaborateProApplication",
             "projectName": "CollaboratePro",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=63684 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=CollaboratePro"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PasswordEncoderGenerator<CollaboratePro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.CollaboratePro.util.PasswordEncoderGenerator",
+            "projectName": "CollaboratePro",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]

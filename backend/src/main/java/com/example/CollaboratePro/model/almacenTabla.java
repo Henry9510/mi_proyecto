@@ -23,7 +23,7 @@ import jakarta.persistence.Id;
 
  
 @Entity
-public class almacen {
+public class almacenTabla {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
@@ -33,11 +33,11 @@ public class almacen {
     int cantidad_almacen;
 
     
-    public almacen() {
+    public almacenTabla() {
         super();
     }
 
-    public almacen(int id, int producto, int cantidad_almacen) {
+    public almacenTabla(int id, int producto, int cantidad_almacen) {
         this.id = id;
         this.producto = producto;
         this.cantidad_almacen = cantidad_almacen;
